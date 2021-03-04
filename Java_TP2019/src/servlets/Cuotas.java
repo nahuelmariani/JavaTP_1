@@ -11,12 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.eclipse.jdt.internal.compiler.ast.TryStatement;
-
 import entities.*;
 import logic.*;
 import java.util.Date;
-import java.util.HashMap;
 
 @WebServlet("/Cuotas")
 public class Cuotas extends HttpServlet {

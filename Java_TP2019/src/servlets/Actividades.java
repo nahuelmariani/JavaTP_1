@@ -243,7 +243,7 @@ public class Actividades extends HttpServlet {
 			//actCtrl.validarCupo(a);
 
 		} else if (debe==0) {
-			request.getSession().setAttribute("message", "Para poder inscribirte debes estar al día con la cuota");
+			request.getSession().setAttribute("message", "Para poder inscribirte debes estar al dia con la cuota");
 			this.listar(request, response);
 			request.getRequestDispatcher("/WEB-INF/inscripcionActividad.jsp").forward(request, response);
 		} else if (!actCtrl.validarCupo(a)) {

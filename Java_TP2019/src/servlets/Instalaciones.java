@@ -133,7 +133,7 @@ public class Instalaciones extends HttpServlet {
 			request.getRequestDispatcher("/WEB-INF/nuevaReserva.jsp").forward(request, response);
 		} else 
 		{
-			request.getSession().setAttribute("message", "Para poder reservar debe estar al día con la cuota");
+			request.getSession().setAttribute("message", "Para poder reservar debe estar al dia con la cuota");
 			this.listar(request, response);
 			request.getRequestDispatcher("/WEB-INF/reservaInstalacion.jsp").forward(request, response);
 		}
@@ -170,7 +170,7 @@ public class Instalaciones extends HttpServlet {
 		
 		
 		reservas = resCtrl.getAll();
-		//uso empty porque si uso null no anda porque en sí esta en null yo necesito saber si no tiene nada
+		//uso empty porque si uso null no anda porque esta en null yo necesito saber si no tiene nada
 		if (reservas.isEmpty()) {
 			System.out.println("no hay reservas");
 			request.getSession().setAttribute("message", "No hay reservas realizadas");
@@ -350,7 +350,7 @@ public class Instalaciones extends HttpServlet {
 		p = (Persona) request.getSession().getAttribute("usuario");
 		
 		reservas = resCtrl.getByUsuario(p.getId());
-		//uso empty porque si uso null no anda porque en sí esta en null yo necesito saber si no tiene nada
+		//uso empty porque si uso null no anda porque esta en null yo necesito saber si no tiene nada
 		if (reservas.isEmpty()) {
 			System.out.println("no hay reservas");
 			request.getSession().setAttribute("message", "No hay reservas realizadas");
